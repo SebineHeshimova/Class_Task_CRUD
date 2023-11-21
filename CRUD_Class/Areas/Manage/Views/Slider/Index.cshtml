@@ -1,0 +1,35 @@
+﻿@model List<Sliders>
+@{
+    int counter = 0;
+}
+<table class="table contact-form">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">RedirectText</th>
+            <th scope="col">RedirectUrl</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sliders in Model)
+        {
+            counter++;
+            <tr>
+                <th scope="row">@counter</th>
+                <td>@sliders.Title</td>
+                <td>@sliders.Description</td>
+                <td>@sliders.RedirectText</td>
+                <td>@sliders.RedirectUrl</td>
+                <td>@sliders.ImageUrl</td>
+                <td>
+                    <a asp-action="update" asp-controller="Features" asp-route-id="@sliders.Id">Update</a>
+                    <a asp-action="delete" asp-controller="Features" asp-route-id="@sliders.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
