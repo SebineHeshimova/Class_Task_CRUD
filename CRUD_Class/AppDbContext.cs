@@ -7,6 +7,10 @@ namespace CRUD_Class
     {
         public AppDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Sliders> Sliders { get; set; }
-        public DbSet<Features> Features { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Author> Author { get; set; }
+        public DbSet<BookTag> BookTags { get; set; }
+        public DbSet<Genre> Genres { get; set; }
     }
 }

@@ -1,24 +1,22 @@
-﻿<form>
-    <fieldset disabled>
-        <legend>Disabled fieldset example</legend>
-        <div class="mb-3">
-            <label for="disabledTextInput" class="form-label">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="disabledSelect" class="form-label">Disabled select menu</label>
-            <select id="disabledSelect" class="form-select">
-                <option>Disabled select</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                <label class="form-check-label" for="disabledFieldsetCheck">
-                    Can't check this
-                </label>
+﻿@model Sliders
+<div class="d-flex justify-content-between align-items-center container-fluid">
+    <h1>Delete a Service</h1>
+</div>
+<div class="container-fluid">
+    <form method="post" class="row">
+        <div class="mb-3 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Title</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">@Model.RedirectUrl</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">@Model.RedirectText</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">@Model.ImageUrl</h6>
+                    <p class="card-text">@Model.Description</p>                  
+                </div>
             </div>
+        <button style="width: 100px" type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="service" asp-action="index" class="btn btn-primary">Back to home</a>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </fieldset>
-</form>
+        
+    </form>
+</div>

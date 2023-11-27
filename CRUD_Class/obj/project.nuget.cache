@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/rG3bZp2ZakWSXsfHP2RHrhomtxsUei1RxpBYbKxEzMuIH+gRnXhRllbkbxrvWIwcQs+3CGJLXMfky80mFFwuA==",
+  "dgSpecHash": "3H4V93uDkKSnXiGWWlKSqHG6Xh7VOtHlCm3NACXIHs61Ri6R9n1jToWW3YCl/zDnuFwl+U720mE6JP8egvwjAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\II novbe\\source\\repos\\CRUD_Class\\CRUD_Class.csproj",
+  "projectFilePath": "C:\\Users\\II novbe\\Desktop\\Class_Task_CRUD\\CRUD_Class\\CRUD_Class.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\II novbe\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

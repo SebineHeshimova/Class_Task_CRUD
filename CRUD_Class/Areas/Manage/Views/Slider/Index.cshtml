@@ -2,6 +2,10 @@
 @{
     int counter = 0;
 }
+<div class="d-flex justify-content-between container-fluid">
+    <h1>Sliders</h1>
+    <div><a asp-action="create" asp-controller="features" asp-route-id="" class="btn btn-primary">Create</a></div>
+</div>
 <table class="table contact-form">
     <thead>
         <tr>
@@ -26,8 +30,8 @@
                 <td>@sliders.RedirectUrl</td>
                 <td>@sliders.ImageUrl</td>
                 <td>
-                    <a asp-action="update" asp-controller="Features" asp-route-id="@sliders.Id">Update</a>
-                    <a asp-action="delete" asp-controller="Features" asp-route-id="@sliders.Id">Delete</a>
+                    <a asp-action="update" asp-controller="Features" asp-route-id="@sliders.Id" class="btn btn-success">Update</a>
+                    <a asp-action="delete" asp-controller="Features" asp-route-id="@sliders.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }

@@ -30,7 +30,7 @@ namespace CRUD_Class.Areas.Manage.Controllers
             }
             _context.Sliders.Add(Sliders);
             _context.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("Index");
         }
         public IActionResult Update(int id)
         {

@@ -1,0 +1,42 @@
+﻿@model List<Book>
+@{
+    int counter = 0;
+}
+<div class="d-flex justify-content-between container-fluid">
+    <h1>Sliders</h1>
+    <div><a asp-action="create" asp-controller="book" asp-route-id="" class="btn btn-primary">Create</a></div>
+</div>
+<table class="table contact-form">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">CostPrice</th>
+            <th scope="col">SalePrice</th>
+            <th scope="col">Code</th>
+            <th scope="col">Tax</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            counter++;
+            <tr>
+                <th scope="row">@counter</th>
+                <td>@book.Name</td>
+                <td>@book.Description</td>
+                <td>@book.CostPrice</td>
+                <td>@book.SalePrice</td>
+                <td>@book.DiscountPercent</td>
+                <td>@book.Code</td>
+                <td>@book.Tax</td>
+                <td>
+                    <a asp-action="update" asp-controller="book" asp-route-id="@book.Id" class="btn btn-success">Update</a>
+                    <a asp-action="delete" asp-controller="book" asp-route-id="@book.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,24 +1,37 @@
-﻿<form>
-    <fieldset disabled>
+﻿@model Sliders
+<div class="d-flex justify-content-between align-items-center container-fluid">
+    <h1>Update a Features</h1>
+</div>
+<div class="container-fluid">
+    <form method="post" class="row">
+
         <legend>Disabled fieldset example</legend>
-        <div class="mb-3">
-            <label for="disabledTextInput" class="form-label">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control">
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Title</label>
+            <input asp-for="Title" type="text" class="form-control">
+            <span asp-validation-for="Title" style="color: red"></span>
         </div>
-        <div class="mb-3">
-            <label for="disabledSelect" class="form-label">Disabled select menu</label>
-            <select id="disabledSelect" class="form-select">
-                <option>Disabled select</option>
-            </select>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">Description</label>
+            <input asp-for="Description" type="text" class="form-control">
+            <span asp-validation-for="Description" style="color: red"></span>
         </div>
-        <div class="mb-3">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                <label class="form-check-label" for="disabledFieldsetCheck">
-                    Can't check this
-                </label>
-            </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">ImageUrl</label>
+            <input asp-for="ImageUrl" type="text" class="form-control">
+            <span asp-validation-for="ImageUrl" style="color: red"></span>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </fieldset>
-</form>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">RedirectUrl</label>
+            <input asp-for="RedirectUrl" type="text" class="form-control">
+            <span asp-validation-for="RedirectUrl" style="color: red"></span>
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="" class="form-label">RedirectText</label>
+            <input asp-for="RedirectText" type="text" class="form-control">
+            <span asp-validation-for="RedirectText" style="color: red"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+
+    </form>
+</div>
